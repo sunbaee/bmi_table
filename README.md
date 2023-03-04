@@ -1,2 +1,6 @@
 # bmi_table
-A site that calculates bmi.
+
+A project of a site that calculates bmi
+
+Access it via the link below:
+
