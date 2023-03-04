@@ -30,30 +30,30 @@ function myScope() {
         h = Number.parseFloat(h);
         let r = '';
         if (!p) {
-            setR('Peso Inválido! ', false);
+            setR('Invalid weight!', false);
             return;
         }
         if (!h) {
-            setR('Altura inválida! ', false);
+            setR('Invalid height!', false);
             return;
         }
         const imc = (p / (h*h)).toFixed(2);
         if (imc < 18.5) {
-            r = 'Abaixo do peso';
+            r = 'Underweight';
         } else if (imc >= 18.5 && imc < 25) {
-            r = 'Peso normal';
+            r = 'Normal weight';
         } else if (imc >= 25 && imc < 30) {
-            r = 'Sobrepeso';
+            r = 'Overweight';
         } else if (imc >= 30 && imc < 35) {
-            r = 'Obesidade grau 1';
+            r = 'Grade 1 obesity';
         } else if (imc >= 35 && imc < 40) {
-            r = 'Obesidade grau 2';
+            r = 'Grade 2 obesity';
         } else if (imc >= 40) {
-            r = 'Obesidade grau 3';
+            r = 'Grade 3 obesity';
         } else {
-            r = 'Dados inválidos!';
+            r = 'Invalid data!';
         }
-        texto = `O seu IMC é ${imc} (${r})`;
+        texto = `Your BMI is ${imc} (${r})`;
         setR(texto, true);
     }
     form.addEventListener('submit', receiveEvent);
